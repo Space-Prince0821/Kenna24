@@ -1,0 +1,188 @@
+<div class="carousal-container">
+  <div id="carouselExampleInterval" class="carousel slide fix-pos" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+          <%= image_tag("63002E19-9663-4CF3-9A39-979177A5A6E7_1_105_c.jpeg") %>
+          </div>
+          
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("372F0634-5E76-47CA-A2FC-858A11C675D9_1_105_c.jpeg") %>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("59219879-EAB1-4B10-A1B3-7ABC5BD5FC33_1_105_c.jpeg") %>
+          </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  <div id="carouselExampleInterval2" class="carousel slide fix-pos" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+          <%= image_tag("img4.PNG") %>
+          </div>
+          
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("img5.jpeg") %>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("img6.JPG") %>
+          </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  <div id="carouselExampleInterval3" class="carousel slide fix-pos" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+          <%= image_tag("img7.JPG") %>
+          </div>
+          
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("img8.PNG") %>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+          <%= image_tag("img9.PNG") %>
+          </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+<%# <img src="../../assets/images/pexels-pixabay-326055.jpg"> %>
+<div class="text-center mt-3 bottom-part">
+  <div class="letter">
+    <p>
+      Happy Birthday Lob!
+      <br>
+      You&apos;re 24 now! I&apos;m glad I get to be a part of your life.
+      We don&apos;t have to do much, I&apos;m happiest with you whenever we do anything at all.
+      You&apos;re amazing to me lob, you&apos;re beautiful, smart, caring, and patient. Thanks for getting me 
+      shirts and making me experience the &quot;Kenna&apos;s use and return policy&quot;. I&apos;m also glad your 
+      coworkers care for you lob, makes me happy. Now, it&apos;s time for my lob to party and relax! You enjoy your 
+      24th birthday lob. I lob u OoO FMTHYH & I trusts u.
+    </p>
+  </div>
+
+  <div>
+    <h1 class="form-label" style="color:white;">Comments</h1>
+
+    <div id="comments" class="mb-3">
+      <% @comments.each do |comment| %>
+        <%= render comment %>
+      <% end %>
+      <%= link_to "New comment", new_comment_path %>
+      <br>
+      <%= image_tag("elmo.gif", :class => "elmo-class") %>
+    </div>
+  </div>
+
+  <div class="letter">
+    <p>
+      <span>&quot;I got enemies, got a lot of enemies
+Got a lot of people tryna drain me of my energy&quot; - Drake</span> 
+      <br><br>
+      <span>&quot;Loved you yesterday, love you still, always have, always will.&quot; - Elaine Davis</span>
+      <br><br>
+      <span>&quot;I be gettin' to the money, everybody mad&quot; - Qveen Herby</span>
+    </p>
+  </div>
+</div>
+
+<style> 
+a {
+  text-decoration: none;
+  color: white;
+}
+.fix-pos {
+  width: 350px;
+  height: 350px;
+}
+
+.carousal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.carousel-inner {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.letter {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  box-shadow: 1px 1px 15px grey;
+  width: 350px;
+  height: 450px;
+  border-radius: 10%;
+  text-align: center;
+  padding-top: 20px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* border: 1px solid white; */
+}
+
+.bottom-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.elmo-class {
+  position: relative;
+  margin-top: 0;
+}
+
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
